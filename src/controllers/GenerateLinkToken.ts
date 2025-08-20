@@ -3,7 +3,7 @@ import express, {Request, Response} from "express";
 const GenerateLinkToken = (req: Request, res: Response) => {
 	//const Links: string = req.body.linksearch;
 	//console.log(Links)
-	//console.log(generateLink());
+	console.log(generateLink());
 	return res.redirect("/")
 }
 function generateLink(): string {
@@ -29,3 +29,4 @@ function generateLink(): string {
 }
 
 export default GenerateLinkToken;
+
