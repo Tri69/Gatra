@@ -1,10 +1,10 @@
 import express, {Request, Response} from "express";
 
 const GenerateLinkToken = (req: Request, res: Response) => {
-	const Links: string = req.body.linksearch;
-	console.log(Links)
-	console.log(generateLink());
-	res.redirect("/")
+	//const Links: string = req.body.linksearch;
+	//console.log(Links)
+	//console.log(generateLink());
+	return res.redirect("/")
 }
 function generateLink(): string {
 	const BaseUrl:any = process.env.BASE_URI;
@@ -27,4 +27,5 @@ function generateLink(): string {
 	
 	return TokenLink;
 }
+
 export default GenerateLinkToken;
