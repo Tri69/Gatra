@@ -7,7 +7,7 @@ const ClickUrl = () => {
 			const url = document.getElementById("submit").value
 			const div_url1 = document.getElementById("url_token");
 				async function FetchApi() {
-				const result = await fetch("/link", {
+				const result = await fetch("/link/get", {
 					method: "POST",
 					headers: {
 						"Content-Type" : "application/json"
@@ -23,4 +23,5 @@ const ClickUrl = () => {
 			FetchApi()
 		}
 		div_alert.innerHTML = `<text class="text_url" style="color:red;">Url Not Found</text>`
+
 }
