@@ -2,14 +2,16 @@
   "name": "shortlink",
   "version": "1.0.0",
   "scripts": {
-    "start" : "nodemon",
-	"build" : "tsc"
+    "start": "nodemon",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "github.com/ITH69",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/cors": "^2.8.19",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
