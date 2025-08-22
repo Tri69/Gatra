@@ -1,14 +1,18 @@
 import express, {Request, Response} from "express";
 
 const GenerateLinkToken = (req: Request, res: Response) => {
-	//const Links: string = req.body.linksearch;
-	//console.log(Links)
+	const Links: string = req.body.linksearch;
+	console.log(Links)
 	console.log(generateLink());
-	return res.redirect("/")
+	const UrlToken: string = generateLink()
+	res.json({
+		"massage" : "tes",
+		"UrlToken" : UrlToken
+	})
 }
 function generateLink(): string {
-	const BaseUrl:any = process.env.BASE_URI;
-	const Karakter: string[]= ["A", "B", "C", "D", "E", "%", "&", "H"];
+	const BaseUrl:any = process.env.BASE_URI_PRODUCTION;
+	const Karakter: string[]= ["A", "B", "C", "D", "E", "F", "G", "H"];
 	const abc: string[] = ["f", "d", "c", "b", "e", "a", "g", "h"];
 	const Angkka : number[] = [1, 2, 3, 4, 5, 9, 7, 9];
 	
@@ -19,14 +23,12 @@ function generateLink(): string {
 		return "Gagal";
 	}
 	const acak:number = Math.round(Math.random() * 5);
-	const an:number = Math.floor(Math.random() * 1);
-	const nnn: number = Math.floor(Math.random() * 100)
+	const an:number = Math.floor(Math.random() * 2);
+	const nnn: number = Math.round(Math.random() * 100);
 	
 	HashLink = abc[acak + an] + nnn + Karakter[acak + an] + abc[acak + 1] + acak;
 	TokenLink = `${BaseUrl}/${HashLink}`;
 	
 	return TokenLink;
 }
-
 export default GenerateLinkToken;
-

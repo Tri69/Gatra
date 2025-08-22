@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 	<head>
-		<title>Paranala | HOME</title>
-		<link rel="stylesheet" href="/styles.css" >
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pranala | HOME</title>
+		<link rel="stylesheet" href="/css/styles.css" >
 	</head>
 	<body>
 		<nav>
 			<div class="nav">
 				<div>
-					<h3>Pralana</h3>
+					<h3><b style="color:violet">Gat</b>ra</h3>
 				</div>
 				<ul class="nav-ul">
 					<li><a href="/">Home</a></li>
-					<li><a href="/">Home</a></li>
-					<li><a href="/">Home</a></li>
-					<li><a href="/">Home</a></li>
+					<li><a href="/">Decode</a></li>
+					<li><a href="/">About</a></li>
+					<li><a href="/">Arsip</a></li>
 				</ul>
 			</div>
 		</nav>
-		<h1 class="title">Test</h1>
-		<form action="/link" method="post">
-			<input type="text" name="linksearch">
-			<input type="submit">
-		</form>
-		
+			
+			
+			<div class="caption_main">
+				<h1 class="title">Short Link The VanJava</h1>
+				<p>Short Link cepat, aman, mudah dan gratis. </p>
+				<div>
+					<input type="text" class="input_url"  id="submit" required>
+					<input type="submit" class="submit" onclick="ClickUrl()">
+				</div>
+			</div>
+			
+			<div id="url_token" class="url_token">
+				
+			</div>	
+			
+			<div class="img_list">
+				<div class="img">
+					<img src="/images/secure.png"/>
+					<br>
+						<text class="img_title">Aman</text></br>
+						<text>Menjamin link yang aman dan dilengkapi scanning tools</text>
+					
+				</div>
+				<div class="img">
+					<img src="/images/fast.png"/><br>
+					<text class="img_title">Cepat</text></br>
+					<text>Menjamin link yang aman dan dilengkapi scanning tools</text>
+				</div>
+				<div class="img">
+					<img src="/images/mudah.png"/><br>
+					<text class="img_title">Praktis</text></br>
+					<text>Menjamin link yang aman dan dilengkapi scanning tools</text>
+				</div>
+				<div class="img">
+					<img src="/images/open.png"/><br>
+					<text class="img_title">Sumber Terbuka</text></br>
+					<text>Menjamin link yang aman dan dilengkapi scanning tools</text>
+				</div>
+			</div>
+			
+			<footer>
+			
+			</footer>
+		<script src="/js/fetch.js" ></script>
 	</body>
-	<style>
-		body{
-			margin:0;
-			padding:0;
-			font-family:arial;
-		}
-		.nav{
-			background:white;
-			box-shadow: 6px 3px 3px rgba(0,0,0,.1);
-			display:flex;
-			justify-content:space-between;
-		}
-		.nav h3{
-			margin-left:20px;
-		}
-		.nav .nav-ul  {
-			display:flex;
-			justify-content:space-between;
-		}
-		.nav .nav-ul li {
-			list-style:none;
-			padding:5px;
-		}
-	</style>
 </html>
