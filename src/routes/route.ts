@@ -6,10 +6,7 @@ import GenerateLinkToken from "../controllers/GenerateLinkToken";
 const Routers:Router = express.Router();
 
 Routers.get("/", PageIndex);
-Routers.post("/link/get", GenerateLinkToken);
 Routers.get("/:token", PageRedirect);
-
-
+Routers.post("/link", GenerateLinkToken);
 
 export default Routers; 
-

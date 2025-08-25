@@ -7,7 +7,7 @@ const ClickUrl = () => {
 			const url = document.getElementById("submit").value
 			const div_url1 = document.getElementById("url_token");
 				async function FetchApi() {
-				const result = await fetch("https://gatra.ithtech.my.id/link/get", {
+				const result = await fetch("/link", {
 					method: "POST",
 					headers: {
 						"Content-Type" : "application/json"
@@ -17,12 +17,21 @@ const ClickUrl = () => {
 					})
 				})
 				const data = await result.json();
-				div_url1.innerHTML = `<text class="text_url">${data.UrlToken}</text>`
-				localStorage.setItem("url_token", data.UrlToken);
+				div_url1.innerHTML = `<text class="text_url">${data.urlToken}</text>`
+				localStorage.setItem("url_token", data.urlToken);
 			}
 			FetchApi()
 		}
 		div_alert.innerHTML = `<text class="text_url" style="color:red;">Url Not Found</text>`
-
 }
 
+const CopyLinkToken =  () => {
+	const linktoken = localStorage.getItem("url_token");
+	navigator.clipboard.writeText(linktoken)
+	.then(() => {
+		console.log("Text berhasil disalin")
+	})
+	.catch((err) => {
+		console.error("gagal ", err)
+	})
+}

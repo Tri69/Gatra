@@ -28,7 +28,7 @@ body{
 			border-radius:12px;
 		}
 		.submit {
-			padding:10px;color:yellow;
+			padding:10px;color: white;background-color:aqua;
 			height:38px;font-size:15px;font-weight:bold;
 			width:80px;border:none;border-radius:12px;
 		}
@@ -60,11 +60,39 @@ body{
 			border:1px solid red;
 			border-radius:3px;
 		}
+		.img_title {
+			font-weight:bold;
+			font-size:21px;margin-bottom:20px;
+			padding:2px;
+		}
 		.text-url {
 			text-align:center;
+		}
+		.footer {
+			text-align:center;
+			background:yellow;
+		}.footer hr {
+			margin:5px;
+		}
+		.footer ul {
+			display:flex; justify-content:center;
+			
+		}
+		.footer ul li {
+			list-style: none;
+			padding:10px;
+		}
+		.box-redirect {
+			width:100%;
+			height:35px;border-radius:9px;
+			border: 0.1px solid red;
+			margin-bottom:90%;
 		}
 		@media(max-width: 670px) {
 			.img_list{
 				display:block;
+			}
+			.submit {
+				margin-top: 10px;
 			}
 		}
